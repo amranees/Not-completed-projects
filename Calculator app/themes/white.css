@@ -1,0 +1,53 @@
+:root {
+    /* ## Colors */
+    /* ### Theme 1 */
+    /* #### Backgrounds */
+    /* ### Theme 2 */
+    /* #### Backgrounds */
+    --light-gray: hsl(0, 0%, 90%);
+    --grayish-red: hsl(0, 5%, 81%);
+    --very-light-gray: hsl(0, 0%, 93%);
+    --dark-moderate-cyan: hsl(185, 42%, 37%);
+    --very-dark-cyan: hsl(185, 58%, 25%);
+    --orange: hsl(25, 98%, 40%);
+    --darkoorange: hsl(25, 99%, 27%);
+    --light-grayish-yellow: hsl(45, 7%, 89%);
+    --dark-grayish-orange: hsl(35, 11%, 61%);
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --white: #fff;
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+.resulte-container {
+    background-color: var(--white);
+}
+
+.theme-box .change-theme-box .theme-ball {
+    background-color: var(--orange);
+}
+
+.nums-board,
+.theme-box .change-theme-box {
+    background-color: var(--grayish-red);
+}
+
+.container header,
+.resulte-container,
+.nums-board .button {
+    color: var(--very-dark-grayish-yellow);
+}
+
+.nums-board .del,
+.nums-board .reset {
+    background-color: var(--dark-moderate-cyan);
+    box-shadow: 0 -3px inset var(--very-dark-cyan);
+}
+
+.nums-board .del,
+.nums-board .reset,
+.nums-board .equal-sign {
+    color: var(--white);
+}

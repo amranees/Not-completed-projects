@@ -1,0 +1,52 @@
+:root {
+    /* #### Backgrounds */
+    --very-very-dark-violet: hsl(268, 75%, 9%);
+    --very-dark-violet: hsl(268, 71%, 12%);
+    /* #### Keys */
+    --dark-violet: hsl(281, 89%, 26%);
+    --vivid-magenta: hsl(285, 91%, 52%);
+    --pure-cyan: hsl(176deg 94% 39%);
+    --soft-cyan: hsl(177, 92%, 70%);
+    --lighter-dark-violet: hsl(268, 47%, 21%);
+    --dark-magenta: hsl(290, 70%, 36%);
+    /* #### Text */
+    --light-yellow: hsl(52, 100%, 62%);
+    --very-dark-blue: hsl(198, 20%, 13%);
+    --white: hsl(0, 0, 100%);
+}
+
+body {
+    background-color: var(--very-very-dark-violet);
+}
+
+.container header,
+.resulte-container,
+.nums-board .button {
+    color: var(--light-yellow)
+}
+
+.theme-box .change-theme-box,
+.resulte-container,
+.nums-board {
+    background: var(--very-dark-violet);
+}
+
+.change-theme-box .theme-ball {
+    background-color: var(--pure-cyan);
+}
+
+.nums-board .button {
+    background-color: var(--lighter-dark-violet);
+    box-shadow: 0px -3px inset var(--dark-magenta);
+}
+
+.nums-board .del,
+.nums-board .reset {
+    background-color: var(--dark-violet);
+    box-shadow: 0 -3px inset var(--vivid-magenta);
+}
+
+.nums-board .equal-sign {
+    background-color: var(--pure-cyan);
+    box-shadow: 0 -3px inset var(--soft-cyan);
+}

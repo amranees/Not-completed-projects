@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Advice generator app</title>
+</head>
+
+<body>
+    <div class="container">
+        <span class="advice-title">Advice #<span class="count">0</span></span>
+        <p class="quote">
+            If the quote did not appear immediately it's because your internet, Please Don't press the button less than 2s
+        </p>
+        <div class="icon">
+            <img src="./images/pattern-divider-desktop.svg" alt="">
+
+        </div>
+        <div class="next"><img src="./images/icon-dice.svg" alt=""></div>
+    </div>
+
+    <script>
+        let quote = document.querySelector('.quote');
+        let button = document.querySelector('.next');
+        let advice_count = document.querySelector('.count');
+
+        let count = 1;
+        async function api() {
+            let resp = await fetch('https://api.adviceslip.com/advice');
+            let data = await resp.json();
+            let advice = await data.slip.advice;
+
+            button.onclick = await
+
+            function() {
+                let check_advice = advice;
+                quote.textContent = advice;
+                advice_count.textContent = count;
+
+                count++;
+                api();
+            }
+        }
+        api();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Rubik:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+body {
+    padding: 15px;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--dark-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+:root {
+    /* ### Primary */
+    --liight-cyan: hsl(150deg 81% 61%);
+    --neo-green: hsl(150, 100%, 66%);
+    /* ### Neutral */
+    --grayish-blue: hsl(217deg 21% 29%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    /* ## Typography */
+    --font-size: 20px;
+}
+
+.container {
+    padding: 40px 20px;
+    width: 484px;
+    border-radius: 15px;
+    background: var(--grayish-blue);
+    text-align: center;
+    position: relative;
+}
+
+.advice-title {
+    display: block;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.quote {
+    color: #d5d5d5;
+    font-size: var(--font-size);
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.icon img {
+    width: 100%;
+}
+
+.next {
+    content: "";
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--liight-cyan);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.next:hover {
+    box-shadow: var(--neo-green) 0 0 20px 5px;
+}
+
+.quote,
+.advice-title,
+.icon {
+    padding: 10px;
+}
+
+@media (max-width: 475px) {
+    .quote {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

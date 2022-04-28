@@ -1,0 +1,38 @@
+@media (max-width: 775px) {
+    .job-box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .right {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 510px) {
+    .container {
+        width: 90%;
+        padding-top: 75px;
+    }
+    .job-box {
+        position: relative;
+        margin-bottom: 35px;
+    }
+    .profile-img {
+        height: 40px !important;
+        position: absolute;
+        top: 0;
+        left: 25px;
+        transform: translateY(-50%) !important;
+    }
+    .left {
+        margin-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--dark-grayish-cyan);
+    }
+    .right {
+        margin: 0;
+    }
+    .filter-box {
+        margin-bottom: 5px;
+    }
+}

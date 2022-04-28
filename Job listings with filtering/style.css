@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+ :root {
+    /* ## Colors
+
+    ### Primary */
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    /* ### Neutral */
+    --light-grayish-cyan-background: hsl(180, 52%, 96%);
+    --light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+    /* ## Typography
+    
+    ### Body Copy */
+    --font-size: 15px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--light-grayish-cyan-background);
+    user-select: none;
+}
+
+header {
+    height: 100px;
+    position: relative;
+    background-color: var(--desaturated-dark-cyan);
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 70%;
+    padding-top: 40px;
+    margin: auto;
+    position: relative;
+}
+
+
+/* filter field  */
+
+.filter-field {
+    width: 100%;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    transform: translate(0, -50%);
+}
+
+
+/* clear filters */
+
+.filter-field .clear {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--desaturated-dark-cyan);
+}
+
+.filter-field .clear:hover {
+    text-decoration: underline;
+}
+
+.filter-field .filter-container>div {
+    margin-right: 5px;
+}
+
+
+/* box filter  */
+
+.filter-box {
+    width: fit-content;
+    height: 22px;
+    padding-left: 4px;
+    border-radius: 3px;
+    font-size: 10px;
+    background: var(--light-grayish-cyan-filter-tablets);
+    color: var(--desaturated-dark-cyan);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.filter-field .filter-box .remove {
+    height: 100%;
+    margin-left: 8px;
+    padding: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    background: var(--desaturated-dark-cyan);
+    cursor: pointer;
+}
+
+.filter-field .filter-box .remove:hover {
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+.filter-field .filter-box .remove img {
+    height: 10px;
+}
+
+
+/* Jobs */
+
+.job-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 8px;
+}
+
+.job-box .left {
+    display: flex;
+    align-items: center;
+}
+
+.job-box .left img {
+    margin-right: 15px;
+    height: 70px;
+}
+
+.job-box .left .txt .company {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--desaturated-dark-cyan);
+}
+
+.job-box .left .txt .new,
+.job-box .left .txt .featured {
+    background: var(--desaturated-dark-cyan);
+    font-size: 9px;
+    padding: 3px 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.job-box .left .title .new:empty {
+    padding: 0;
+}
+
+.job-box .left .txt .featured {
+    background: var(--very-dark-grayish-cyan);
+}
+
+.job-box .left .txt .title {
+    margin: 8px 0;
+    color: var(--desaturated-dark-cyan);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.job-box .left .txt .footer {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark-grayish-cyan);
+}
+
+.job-box .left .txt .footer span {
+    display: inline-block;
+    position: relative;
+    flex-grow: 1;
+}
+
+.job-box .left .txt .footer span::after {
+    content: '';
+    width: 2px;
+    height: 2px;
+    background-color: var(--dark-grayish-cyan);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-100%, -50%);
+}
+
+
+/* right  */
+
+.job-box .right .filter-box {
+    padding: 4px;
+    cursor: pointer;
+}
+
+.job-box .right .filter-box:hover {
+    background: var(--desaturated-dark-cyan);
+    color: #fff;
+}
+
+.job-box .right span {
+    margin-right: 3px;
+}

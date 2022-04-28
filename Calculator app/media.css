@@ -1,0 +1,17 @@
+@media(max-width: 400px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+    .nums-board {
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nums-board .button {
+        font-size: 17px !important;
+    }
+    .nums-board .del,
+    .nums-board .reset {
+        font-size: 15px !important;
+    }
+}

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+ :root {
+    /* ## Colors */
+    /* ### Primary */
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --very-very-dark-blue: hsl(234, 17%, 12%);
+    /* ## Typography
+
+### Body Copy */
+    --font-size: 12px;
+}
+
+body {
+    perspective: 600px;
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/pattern-hills.svg') bottom no-repeat, url('./images/bg-stars.svg');
+    background-color: var(--very-very-dark-blue);
+    user-select: none;
+}
+
+.container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.title {
+    color: var(--white);
+    letter-spacing: 5px;
+}
+
+
+/* Start counter  */
+
+.counter-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.counter-box {
+    text-align: center;
+}
+
+.counter-box span.categ {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: var(--grayish-blue);
+}
+
+.counter {
+    padding: 15px 20px;
+    color: var(--soft-red);
+    font-size: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-weight: bold;
+    position: relative;
+}
+
+
+/* circles */
+
+.counter::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--very-dark-blue);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.counter::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--very-dark-blue);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: 1;
+}
+
+
+/* circles */
+
+
+/* inner-counter */
+
+.counter span.num {
+    z-index: 1;
+    position: relative;
+}
+
+.counter .top-counter {
+    background: hsl(235deg 18% 19%);
+    border-bottom: solid 1px var(--very-dark-blue);
+    top: 0;
+    left: 0;
+    transition: 1s;
+    transform-origin: bottom;
+}
+
+.counter .down-counter {
+    /* padding: 0 20px 25px; */
+    top: 50%;
+    left: 0;
+    background: var(--dark-desaturated-blue);
+}
+
+.counter .top-counter,
+.counter .down-counter {
+    width: 100%;
+    position: absolute;
+    height: 50%;
+}
+
+
+/* inner-counter */
+
+
+/* End counter  */
+
+
+/* icons */
+
+.icons a {
+    font-size: 25px;
+    color: var(--dark-desaturated-blue);
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.icons a:hover {
+    color: var(--soft-red);
+}
+
+
+/* media  */
+
+@media(max-width: 690px) {
+    .counter-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .counter {
+        font-size: 45px;
+    }
+}

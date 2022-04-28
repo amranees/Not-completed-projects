@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+ :root {
+    /* ## Colors
+
+### Primary */
+    --dark-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    user-select: none;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 450px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--dark-gray);
+}
+
+.section-1 {
+    padding: 28px 20px;
+    position: relative;
+    background: url('./images/desktop-image-hero-1.jpg');
+    background-size: cover;
+    color: var(--white);
+}
+
+.logo {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+nav.desktop {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+nav.desktop h3 {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+nav.desktop span {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+nav.desktop span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    display: none;
+}
+
+nav.desktop span:hover::before {
+    display: block;
+}
+
+
+/* nav Mobile  */
+
+.close {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav.mobile {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--white);
+    width: 100%;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+nav.mobile.active {
+    display: flex;
+}
+
+nav.mobile span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* nav Mobile  */
+
+.section-1 .menu {
+    height: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Section 2 */
+
+.section-2 {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* text-align: center; */
+}
+
+.section-2 p {
+    margin: 30px 0;
+}
+
+.section-2 .shop-now {
+    letter-spacing: 8px;
+    width: 100%;
+    /* font-weight: bold; */
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 70px;
+}
+
+.section-2 .shop-now:hover {
+    color: var(--dark-gray);
+}
+
+
+/* Arrows  */
+
+.section-2 .arrows {
+    background-color: var(--black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.section-2 .arrows>div {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.section-2 .arrows>div:hover {
+    background: var(--very-dark-gray);
+}
+
+
+/* section 3  */
+
+.section-3 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    flex-grow: 1;
+}
+
+.section-3 .one {
+    background: url('./images/image-about-dark.jpg');
+    background-size: cover;
+}
+
+.section-3 .two {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-3 span {
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.section-3 .three {
+    background: url('./images/image-about-light.jpg');
+    background-size: cover;
+}
